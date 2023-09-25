@@ -1,0 +1,82 @@
+:root{
+    --background-color: #fff;
+    --text-color: #555;
+    --title-color: #000;
+}
+
+body{
+    background: var(--background-color);
+    color: var(--text-color);
+}
+
+.opener {
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+    font-family: "Lucidia", monospace;
+
+}
+
+h1{
+    font-size: 140px;
+    margin-top: 150px;
+    margin-bottom: 15px;
+
+}
+
+h2{
+    font-size: 70px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+h4{
+    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    color:dimgray;
+    font-family: "Brush Script MT", cursive;
+}
+
+
+fieldset {
+    border-color: transparent;
+}
+
+section{
+    width: 70%;
+    height: 35vh;
+    margin: 0;
+    margin-top: 150px;
+    background-color: midnightblue;
+    color: #f5f6f7;
+    align-self: center;
+}
+label{
+    display: block;
+    
+}
+.message{
+    width: 80%;
+    height: 5vh;
+
+}
+
+.dark-mode{
+    background-color: #4864ff;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.dark-theme{
+    --background-color: #000;
+    --text-color: #fff;
+    --title-color: #fff;
+}
