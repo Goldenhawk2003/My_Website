@@ -1,0 +1,218 @@
+:root{
+    --background-color: #fff;
+    --text-color: #000;
+    --title-color: #000;
+
+
+}
+
+body{
+    background: var(--background-color);
+    color: var(--text-color);
+    overflow-y: auto; 
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the body takes at least the full height of the viewport */
+    margin: 0;
+}
+.skills{
+  text-align: center;
+}
+
+.opener {
+    width: 80%;
+   padding: 20px;
+    text-align: center;
+    font-family: "Lucidia", monospace;
+
+}
+
+h1{
+    font-size: 140px;
+    margin-top: 150px;
+    margin-bottom: 15px;
+    text-align: center; 
+    padding-left: 20%;
+    z-index: 2;
+
+}
+
+h2{
+    font-size: 70px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+h4{
+    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center; 
+    padding-left: 20%;
+ 
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    z-index: 2;
+}
+
+
+fieldset {
+    border-color: transparent;
+}
+
+section{
+    width: 60vw;
+    max-width: 500px;
+    min-width: 300px;
+    height: 35vh;
+    margin: 0 auto;
+    margin-top: 150px;
+    color: #000000;
+    align-self: center;
+    padding-bottom: 4em;
+}
+label{
+    display: block;
+    
+}
+
+/* DARK MODE */
+.dark-mode{
+    background-color: #121212;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.dark-theme{
+    --background-color: #121212;
+    --text-color: #fff;
+    --title-color: #fff;
+    --box-color: #fff;
+}
+
+
+label[for="name"], label[for="email"], .message {
+  text-align: center;
+}
+input[type="name"], input[type="email"], textarea[type="message"]{
+  display: block;
+  margin: 0 auto; 
+}
+input, textarea{
+    background-color: var(--background-color);
+    border: 1px solid var(--text-color);
+    color: var(--text-color);
+    margin: 10px 0 0 0; 
+    width: 40%;
+    min-width: 100px;
+    min-height: 2em;
+    display: block;
+    
+
+}
+fieldset {
+    border: none;
+    padding: 2rem 0;
+
+  }
+
+
+
+input[type="submit"] , button[type="submit"]{
+    display: block;
+    width: 40%;
+    margin: 1em auto;
+    height: 2em;
+    font-size: 1.1rem;
+    background-color: var(--background-color);
+    border-color: var(--text-color);
+    color: var(--text-color);
+    min-width: 300px;
+    align-self: center;
+  }
+
+
+
+
+.social{
+    display: inline-block;
+}
+
+
+footer{
+  border-top: 1px solid #ccc; /* Top border */
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; 
+}
+
+/* DVD ANIMATION*/
+body {
+    margin: 0;
+    overflow: auto;
+  }
+  
+  .logo-container {
+    position: absolute;
+    z-index: -1;
+  }
+  
+  #dvd-logo {
+    width: 100px; /* Adjust the size of the logo as needed */
+    height: auto;
+    z-index: 0;
+  }
+
+
+
+
+  /*TABS */
+  .tabs {
+    background-color: #f4f4f4;
+    padding: 0;
+    display: flex;
+    text-align:center;
+    align-items: center;
+  }
+  
+  .tab-btn {
+    background-color: rgb(45,13,109);
+    color: rgb(232,171,59);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .tab-btn:hover {
+    background-color: #fff;
+  }
+  
+  .tab-content {
+    padding: 20px;
+    text-align: center;
+    
+
+  }
+
+  .tab-btn, .dark-mode{
+    line-height: 1;
+    font-size: 16px;
+    flex:1;
+  }
+
+
+  /* RESUME SKILLS ICONS */
+  .enlarge-on-hover {
+    transition: transform 0.3s ease-in-out; /* Add a smooth transition effect */
+  }
+  
+  .enlarge-on-hover:hover {
+    transform: scale(1.5); /* Increase the size on hover (adjust the scale factor as needed) */
+  }
