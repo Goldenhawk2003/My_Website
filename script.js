@@ -45,43 +45,19 @@ function openTab(tabName) {
 // Email
 // ------------------------------------------------------
 // ------------------------------------------------------
-function sendEmail() {
-  const name = document.getElementById('name').value;
-  const email = document.getElementById('email').value;
-  const message = document.getElementById('message').value;
+function sendEmail(){
+  Email.send({
+        Host : "smtp.elasticemail.com",
+        Username : "ammar.webfile@gmail.com",
+        Password : "A04AD333BFC2C3AF3D63E66C2A2D5C08C9D0",
+        To : 'ammar.webfile@gmail.com',
+        From : "ammar.webfile@gmail.com",
+        Subject : "New form",
+        Body : "Name: " + document.getElementById("name").value
+              + "<br> Email: " + document.getElementById("email").value
+              + "<br> Message: " + document.getElementById("message").value
+    }).then(
+      message => alert("Message Sent successfully")
+);
 
-  // Send the data to the server
-  fetch('/send-email', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      name: name,
-      email: email,
-      message: message,
-    }),
-  })
- .then(response => {
-  if (!response.ok) {
-    throw new Error(`HTTP error! Status: ${response.status}`);
-  }
-  return response.json();
-})
-.then(data => {
-  if (data.success) {
-    alert('Email sent successfully!');
-  } else {
-    alert('Failed to send email. Please try again later.');
-  }
-})
-.catch(error => {
-  console.error('Error:', error);
-  alert('An error occurred. Please try again later.');
-});
-
-  // Clear the form
-  document.getElementById('name').value = '';
-  document.getElementById('email').value = '';
-  document.getElementById('message').value = '';
 }
