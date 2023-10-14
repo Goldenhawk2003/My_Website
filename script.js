@@ -62,18 +62,23 @@ function sendEmail() {
       message: message,
     }),
   })
-  .then(response => response.json())
-  .then(data => {
-    if (data.success) {
-      alert('Email sent successfully!');
-    } else {
-      alert('Failed to send email. Please try again later.');
-    }
-  })
-  .catch(error => {
-    console.error('Error:', error);
-    alert('An error occurred. Please try again later.');
-  });
+ .then(response => {
+  if (!response.ok) {
+    throw new Error(`HTTP error! Status: ${response.status}`);
+  }
+  return response.json();
+})
+.then(data => {
+  if (data.success) {
+    alert('Email sent successfully!');
+  } else {
+    alert('Failed to send email. Please try again later.');
+  }
+})
+.catch(error => {
+  console.error('Error:', error);
+  alert('An error occurred. Please try again later.');
+});
 
   // Clear the form
   document.getElementById('name').value = '';
