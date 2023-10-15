@@ -283,15 +283,20 @@ h1{
       size: 60%;
       align-items: center;
         }
-.center-wrapper {
-          display: flex;
-          align-items: center;
+.code-container {
+          font-family: 'Courier New', monospace;
+          font-size: 18px;
+          border: 2px solid #333;
+          padding: 20px;
+          background-color: var(--background-color);
+          border-radius: 8px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+          max-width: 250px;
+          max-height: 100px;
+          z-index: 2;
           align-self: center;
-          padding-top: 10px;
-          padding-right: 200px;
-          justify-content: center;  /* Center children horizontally */  /* Center children vertically */
-          height: 100px;    
-          z-index: 2;        /* Take the full viewport height */
-      }
+        
+          
+        }
       
   }
