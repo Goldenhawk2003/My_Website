@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ammar Ogeil</title>
     <link href="style.css" rel="stylesheet"/>
-
-
   </head>
     <body>
       <div class="tabs">
@@ -17,51 +15,43 @@
         <button class="tab-btn" onclick="openTab('services')">About Me</button>
         <button class="tab-btn" onclick="openTab('contact')">Contact Me</button>
         <div class="dark-mode" id="btn">
-          <span>Dark</span>
-          <img src="images/moon.png" width="16px" height="16px"> 
+          <span id="btnText">Dark</span>
+          <img src="images/moon.png" width="16px" height="16px" id="btnIcon"> 
         </div>
         
       </div>
     
       <div id="home" class="tab-content">
-
        
         <div class="opener">
   
           <div class="logo-container">
             <img src="images/ammar.jpg" alt="DVD Logo" id="dvd-logo">
           </div>
-          
-  
   
           <main> 
             <h1> AMMAR OGEIL</h1>
             <h4>Welcome to my website</h4>
-
+            <div class="center-wrapper">
             <div id="code-container" class="code-container">
               <pre id="python-code" class="python-code"></pre>
               
             </div>
+            </div>
 
           </main>
   
-         <section>
-          
-            
-            <!-- <input type="button" class="dark-mode"/> -->
-        
-          
-         </section>
-       
-         
+        <!-- <section>
+            <input type="button" class="dark-mode"/> 
+         </section>    -->
         </div>
       </div>
     
       <div id="about" class="tab-content" style="display:none;">
-        <h2>About Us</h2>
+        <h2>Projects</h2>
         <!-- About tab content goes here -->
+
       </div>
-    
       <div id="services" class="tab-content" style="display:none;">
         
         <!-- Services tab content goes here -->
@@ -70,6 +60,11 @@
         <p>programming and software engineering concepts, I am looking</p>
         <p>to gain the most experience possible before graduating, and also</p>
         <p>apply what I have learned to better the tech space.</p>
+       
+       
+        <p>my resume</p>
+        <a href="images/Resume CS-2.pdf" target="_blank">
+          <img class="enlarge-on-hover" src="images/Screenshot 2023-10-15 at 5.02.21 PM.png" width="240px" height="240px" /></a>
         <p class="skills">My Skills </p>
         <fieldset class="plang">
             <img class="enlarge-on-hover" src="images/logos/926px-C_Programming_Language.svg.png"  width="64px" height="64px"/>
@@ -78,8 +73,10 @@
             <img class="enlarge-on-hover" src="images/logos/JavaScript-logo.png" width="64px" height="64px"/>
             <img class="enlarge-on-hover" src="images/logos/png-transparent-java-runtime-environment-programming-language-programmer-computer-programming-java-text-logo-software-developer.png" width="64px" height="64px"/>
             <img class="enlarge-on-hover" src="images/logos/Python-logo-notext.svg.png" width="64px" height="64px"/>
-
+            <img class="enlarge-on-hover" src="images/logos/unnamed.png" width="64px" height="64px"/>
         </fieldset>
+        <p> My certifications</p>
+
       </div>
     
       <div id="contact" class="tab-content" style="display:none;">

@@ -10,8 +10,8 @@ function animateLogo() {
   x += xSpeed;
   y += ySpeed;
 
-  const maxX = window.innerWidth - logo.width;
-  const maxY = window.innerHeight - logo.height;
+  const maxX = (window.innerWidth - logo.width);
+  const maxY = (window.innerHeight - logo.height);
 
   if (x < 0 || x > maxX) {
     xSpeed = -xSpeed;
@@ -42,9 +42,20 @@ function openTab(tabName) {
     }
   }
   let btn = document.getElementById("btn");
+  let btnText = document.getElementById("btnText");
+  let btnIcon = document.getElementById("btnIcon");
 
   btn.onclick = function(){
     document.body.classList.toggle("dark-theme");
+
+    if( document.body.classList.contains("dark-theme")){
+      btnIcon.src = "images/sun.png"
+      btnText.innerHTML = "Light"
+    }else{
+      btnIcon.src = "images/moon.png"
+      btnText.innerHTML = "Dark"
+    }
+
   }
 // Email
 // ------------------------------------------------------
@@ -70,8 +81,10 @@ function sendEmail(){
 const codeLines = [
   'print("Hello, World!")',
   'for i in range(5):',
-  '    print("Line", i)',
-  'print("End of code")'
+  'name = input("Enter your name: ")',
+  'if number % 2 == 0:',
+  'while True:',
+  'def merge_sort():'
 ];
 
 const codeContainer = document.getElementById('python-code');
