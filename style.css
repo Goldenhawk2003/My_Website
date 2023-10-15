@@ -289,8 +289,8 @@ h1{
           border: 2px solid #333;
           background-color: var(--background-color);
           border-radius: 8px;
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
           z-index: 2;
+          size-adjust: 40%;
 
         
           
