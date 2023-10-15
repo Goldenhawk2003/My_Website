@@ -217,13 +217,13 @@ body {
     transform: scale(1.5); /* Increase the size on hover (adjust the scale factor as needed) */
   }
 
- /* PHONES */
+  /* PHONES */
   @media(max-width: 480px) {
-  h1{
-    font-size: 220px;
-      
-  }
+h1{
+      font-size: 220;
+        
+    }
 .tab-btn{
-    size: 80%;
-      }
+      size: 80%;
+        }
   }
