@@ -65,3 +65,43 @@ function sendEmail(){
 );
 
 }
+
+
+const codeLines = [
+  'print("Hello, World!")',
+  'for i in range(5):',
+  '    print("Line", i)',
+  'print("End of code")'
+];
+
+const codeContainer = document.getElementById('python-code');
+let currentLineIndex = 0;
+
+function animateCode() {
+  const currentLine = codeLines[currentLineIndex];
+  const currentCode = currentLine.substring(0, codeContainer.innerHTML.length + 1);
+  codeContainer.innerHTML = currentCode;
+
+  if (currentCode === currentLine) {
+    setTimeout(() => {
+      eraseCode();
+    }, 1000); // Wait for 1 second before erasing
+  } else {
+    setTimeout(animateCode, 50); // Adjust the speed of animation if needed
+  }
+}
+
+function eraseCode() {
+  const currentLine = codeLines[currentLineIndex];
+  const currentCode = currentLine.substring(0, codeContainer.innerHTML.length - 1);
+  codeContainer.innerHTML = currentCode;
+
+  if (currentCode === '') {
+    currentLineIndex = (currentLineIndex + 1) % codeLines.length; // Move to the next line
+    setTimeout(animateCode, 500); // Wait for 0.5 seconds before writing the next line
+  } else {
+    setTimeout(eraseCode, 50); // Adjust the speed of erasing if needed
+  }
+}
+
+animateCode(); // Start the animation

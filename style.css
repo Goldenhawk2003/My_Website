@@ -170,7 +170,33 @@ body {
     z-index: 0;
   }
 
-
+  
+  .code-container {
+    font-family: 'Courier New', monospace;
+    font-size: 18px;
+    border: 2px solid #333;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .python-code {
+  
+    color: #2E8B57; /* Dark Sea Green */
+  }
+  
+  .keyword {
+    color: #0000FF; /* Blue */
+  }
+  
+  .comment {
+    color: #808080; /* Gray */
+  }
+  
+  .string {
+    color: #FF0000; /* Red */
+  }
 
 
   /*TABS */
