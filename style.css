@@ -186,6 +186,7 @@ body {
     display: flex;
     align-items: center;
     align-self: center;
+    padding-left: 250px;
     justify-content: center;  /* Center children horizontally */  /* Center children vertically */
     height: 100px;            /* Take the full viewport height */
 }
