@@ -10,14 +10,14 @@ function animateLogo() {
   x += xSpeed;
   y += ySpeed;
 
-  const maxX = window.innerWidth - logo.width *1.30;
-  const maxY = window.innerHeight - logo.height/2;
+  const maxX = window.innerWidth - logo.width;
+  const maxY = window.innerHeight - logo.height;
 
-  if (x < -15 || x > maxX) {
+  if (x < 0 || x > maxX) {
     xSpeed = -xSpeed;
   }
 
-  if (y < -15 || y > maxY) {
+  if (y < 0 || y > maxY) {
     ySpeed = -ySpeed;
   }
 
