@@ -216,3 +216,10 @@ body {
   .enlarge-on-hover:hover {
     transform: scale(1.5); /* Increase the size on hover (adjust the scale factor as needed) */
   }
+
+ /* PHONES */
+  @media(max-width: 480px) {
+  h1{
+    font-size: 12px;
+  }
+  }
