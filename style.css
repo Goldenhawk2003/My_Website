@@ -220,6 +220,10 @@ body {
  /* PHONES */
   @media(max-width: 480px) {
   h1{
-    font-size: 36px;
+    font-size: 40%;
+      
   }
+.tab-btn{
+    size: 80%;
+      }
   }
