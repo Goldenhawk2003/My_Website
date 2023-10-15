@@ -82,9 +82,9 @@
         <p>Contact me using the message box below or directly on <a>ammarogeil@gmail.com</a></p>
           <form onsubmit="sendEmail(); reset(); return false;">
             <fieldset>
-              <label for="name">Name: <input type="name" id="name" placeholder="John Doe" /></label>
-              <label for="email"> Email: <input id="email" type="email" placeholder="user123@gmail.com" /></label>
-              <label class="message" for="message">Message:</label><textarea type="message" id="message" rows="3" cols="30" placeholder="Are you employed?"></textarea>
+              <label for="name">Name: <input required type="name" id="name" placeholder="John Doe" /></label>
+              <label for="email"> Email: <input required id="email" type="email" placeholder="user123@gmail.com" /></label>
+              <label class="message" for="message">Message:</label><textarea required type="message" id="message" rows="3" cols="30" placeholder="How can I help you?"></textarea>
               <button  class="submit" type="submit" >Submit</button>
             </fieldset>
             </form>
