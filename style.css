@@ -308,3 +308,20 @@ h1{
   font-size:20px;
   color: rgb(232,171,59);
 }
+.chore_container{
+  display: flex;
+  align-items: start;
+}
+
+.chore_text{
+  flex: 1;  /* This will allow the text to take up the remaining space */
+  margin-right: 10px;
+}
+
+.chore_img{
+  display: flex;
+  justify-content: center; /* Horizontally centers the child elements */
+  align-items: center;     /* Vertically centers the child elements */
+  height: 100%;  
+    
+}
