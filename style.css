@@ -310,8 +310,10 @@ h1{
   color: rgb(232,171,59);
 }
 .chore_container{
-  display: flex;
-  align-items: start;
+  display: block; /* This will allow you to have a flexible layout */
+  flex-wrap: wrap; /* This will allow the items to wrap as needed */
+  align-items: center;
+  justify-content: center;
 }
 
 .chore_text{
@@ -320,9 +322,29 @@ h1{
 }
 
 .chore_img{
+ /* Adjust the margin as needed */
+  flex: 1;
+  max-width: 100%; /* This ensures the image is responsive and fits within its container */
+  height: auto;
+  display: block;
+  align-items: center;
+  justify-content: center;
+ 
+}
+
+.chore-img{
+   /* Adjust the margin as needed */
+  flex: 1;
+  max-width: 100%; /* This ensures the image is responsive and fits within its container */
+  height: auto;
   display: flex;
-  justify-content: center; /* Horizontally centers the child elements */
-  align-items: center;     /* Vertically centers the child elements */
-  height: 100%;  
-    
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+}
+
+.CP317{
+
+  display: block;
+  justify-content: center;
 }
