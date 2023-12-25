@@ -1,27 +1,37 @@
-const logo = document.getElementById('dvd-logo');
-const container = document.querySelector('.logo-container');
 
-let x = 0;
-let y = 0;
-let xSpeed = 2;
-let ySpeed = 2;
+const container = document.querySelector('.logo-container');
+const dvdLogo = document.getElementById("dvd-logo");
+let x = 0, y = 0;
+let xSpeed = 2, ySpeed = 2;
+
 
 function animateLogo() {
+  const screenWidth = window.innerWidth;
+  const screenHeight = window.innerHeight;
+  const logoWidth = dvdLogo.clientWidth;  // Account for the logo's width
+  const logoHeight = dvdLogo.clientHeight; // Account for the logo's height
+
+  // Update position
   x += xSpeed;
   y += ySpeed;
 
-  const maxX = (window.innerWidth - logo.width);
-  const maxY = (window.innerHeight - logo.height);
-
-  if (x < 0 || x > maxX) {
-    xSpeed = -xSpeed;
+  // Check for collision with screen borders and adjust for logo dimensions
+  if (x + logoWidth >= screenWidth || x <= 0) {
+      xSpeed *= -1;
+      // Adjust x to keep within bounds
+      x = Math.max(0, Math.min(screenWidth - logoWidth, x));
+  }
+  if (y + logoHeight >= screenHeight || y <= 0) {
+      ySpeed *= -1;
+      // Adjust y to keep within bounds
+      y = Math.max(0, Math.min(screenHeight - logoHeight, y));
   }
 
-  if (y < 0 || y > maxY) {
-    ySpeed = -ySpeed;
-  }
+  // Apply position
+  dvdLogo.style.left = x + "px";
+  dvdLogo.style.top = y + "px";
 
-  logo.style.transform = `translate(${x}px, ${y}px)`;
+  dvdLogo.style.transform = `translate(${x}px, ${y}px)`;
 
   requestAnimationFrame(animateLogo);
 }
