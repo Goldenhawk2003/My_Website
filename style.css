@@ -359,5 +359,18 @@ h1{
     right: 0;
     text-align: center;
   }
-}
+  .chore-img{
+    /* Adjust the margin as needed */
+   flex: 1;
+   max-width: 60%; /* This ensures the image is responsive and fits within its container */
+   height: auto;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   justify-self: center;
+  }
+  .certy{
+    max-width: 250px;
 
+  }
+}
