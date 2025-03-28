@@ -1,36 +1,36 @@
 
 const container = document.querySelector('.logo-container');
-const dvdLogo = document.getElementById("dvd-logo");
-let x = 0, y = 0;
-let xSpeed = 2, ySpeed = 2;
 
+
+const dvdLogo = document.getElementById('dvd-logo');
+
+let x = 0;
+let y = 0;
+let xSpeed = 2;
+let ySpeed = 2;
 
 function animateLogo() {
   const screenWidth = window.innerWidth;
   const screenHeight = window.innerHeight;
-  const logoWidth = dvdLogo.clientWidth;  // Account for the logo's width
-  const logoHeight = dvdLogo.clientHeight; // Account for the logo's height
+  const logoWidth = dvdLogo.clientWidth;
+  const logoHeight = dvdLogo.clientHeight;
 
-  // Update position
   x += xSpeed;
   y += ySpeed;
 
-  // Check for collision with screen borders and adjust for logo dimensions
+  // Bounce off horizontal edges
   if (x + logoWidth >= screenWidth || x <= 0) {
-      xSpeed *= -1;
-      // Adjust x to keep within bounds
-      x = Math.max(0, Math.min(screenWidth - logoWidth, x));
+    xSpeed *= -1;
+    x = Math.max(0, Math.min(screenWidth - logoWidth, x));
   }
+
+  // Bounce off vertical edges
   if (y + logoHeight >= screenHeight || y <= 0) {
-      ySpeed *= -1;
-      // Adjust y to keep within bounds
-      y = Math.max(0, Math.min(screenHeight - logoHeight, y));
+    ySpeed *= -1;
+    y = Math.max(0, Math.min(screenHeight - logoHeight, y));
   }
 
-  // Apply position
-  dvdLogo.style.left = x + "px";
-  dvdLogo.style.top = y + "px";
-
+  // Only use transform
   dvdLogo.style.transform = `translate(${x}px, ${y}px)`;
 
   requestAnimationFrame(animateLogo);

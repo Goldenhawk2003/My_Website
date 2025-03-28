@@ -12,6 +12,7 @@
 body, html {
   margin: 0;
   padding: 0;
+
   box-sizing: border-box;
 }
 
@@ -24,6 +25,7 @@ body{
     flex-direction: column;
     min-height: 100vh; /* Ensure the body takes at least the full height of the viewport */
     margin: 0;
+
 }
 .skills{
   text-align: center;
@@ -31,9 +33,9 @@ body{
 
 .opener {
     width: 80%;
-   padding: 20px;
     text-align: center;
     font-family: "Lucidia", monospace;
+    border: 2px solid red;
 
 }
 
@@ -164,6 +166,7 @@ footer{
   justify-content: center;
   align-items: center;
   text-align: center; 
+  margin-top: 15%;
 }
 
 /* DVD ANIMATION*/
@@ -181,7 +184,12 @@ body {
     width: 100px; /* Adjust the size of the logo as needed */
     height: auto;
     z-index: 0;
-
+   
+    position: absolute;
+      top: 0;
+      left: 0;
+      will-change: transform;
+    
   }
 
   .center-wrapper {
