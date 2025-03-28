@@ -94,7 +94,8 @@ const codeLines = [
   'name = input("Enter your name: ")',
   'if number % 2 == 0:',
   'while True:',
-  'def merge_sort():'
+  'def merge_sort():',
+  'is_sorted( ):'
 ];
 
 const codeContainer = document.getElementById('python-code');
