@@ -1,181 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ammar Ogeil</title>
-    <link href="style.css" rel="stylesheet"/>
-  </head>
-    <body>
-      <div class="tabs">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ammar Ogeil</title>
+  <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+  <div id="header"></div>
+  <div id="tabs"></div>
+  <div id="content"></div>
+  <div id="footer"></div>
 
-        <button class="tab-btn" onclick="openTab('home')">Home</button>
-        <button class="tab-btn" onclick="openTab('about')">Projects</button>
-        <button class="tab-btn" onclick="openTab('services')">About Me</button>
-        <button class="tab-btn" onclick="openTab('contact')">Contact Me</button>
-        <div class="dark-mode" id="btn">
-          <span id="btnText">Dark</span>
-          <img src="images/moon.png" width="16px" height="16px" id="btnIcon">
-        </div>
-        
-      </div>
-    
-      <div id="home" class="tab-content">
-
-        <div class="opener">
-  
-          <div class="logo-container">
-          <img src="images/386350499_866103001742267_6840503657486140163_n.jpg" alt="DVD Logo" id="dvd-logo">
-          </div>
-  
-          <main>
-            <h1> AMMAR OGEIL</h1>
-            <h4>Welcome to my website</h4>
-            <div class="center-wrapper">
-            <div id="code-container" class="code-container">
-              <pre id="python-code" class="python-code"></pre>
-              
-            </div>
-            </div>
-
-          </main>
-  
-        <!-- <section>
-            <input type="button" class="dark-mode"/></section>    -->
-        </div>
-      </div>
-    
-      <div id="about" class="tab-content" style="display:none;">
-        <h2>Projects</h2>
-        <!-- About tab content goes here -->
-         <div class="chore_container">
-          <div class="chore_text">
-            <h3 class="chore_header">Contracting CRM</h3>
-            <p>I created a custom CRM and website from scratch based on the client's needs and requirments. I used tools like React and</p>
-            <p>Django Framworks for the fronted and backend respectively. for the database I used a mix of postgresql and mongo db</p>
-            <p>At the moment the website is not yet public and has a scheduled release date of January 20th, 2025</p>
-            </div>
-            <div class="CRM-images">
-              <img src="logos/IMG_2582.PNG" >
-              <img src="images/CRM2.png" height="400px" width="400px">
-              <img src="images/CRM3.png" height="400px" width="400px">
-            </div>
-         </div>
-        <div class="chore_container">
-          <div class="chore_text">
-            <h3 class="chore_header">Quantum Clustering</h3>
-            <P>Under the supervision of my proffesor I developed a clustering algorithm that utilizes the pennylane frameworks</P>
-            <p>I used python and libraries like matplotlib, pandas, numpy, pennylane, and even Qiskit. the algorithm clusters datapoints on a graph based on statistical similarities</p>
-            <div class="chore-img">
-              <img class="CP317" src="images/clusters.png">
-              
-            </div>
-            <div class="chore_img">
-              <a href="https://github.com/Goldenhawk2003/CP493" target="_blank"><img src="images/3291695.png" height="50px" width="50px"> </a>
-              
-            </div>
-          </div>
-        </div>
-        <div class="WeatherApp">
-          <h3 class="chore_header">Weather App</h3>
-          <p>This is my first IOS app built with Swift</p>
-          <p>The App takes your current location and gives you the Weather at the current time</p>
-          <div class="Weather_container">
-            <img src="images/App_Image1.PNG" height="432px" width="200px">
-            <img src="images/App_Image2.PNG" heigh="200px" width="200px">
-            <div class="chore_img">
-              <a href="https://github.com/Goldenhawk2003/WeatherApp" target="_blank"><img src="images/3291695.png" height="50px" width="50px"> </a>
-              
-            </div>
-        </div>
-        </div>
-        <div class="chore_container">
-          <div class="chore_text">
-        <h3 class="chore_header">Grade Automater</h3>
-        <p>In this project I, with the help of a partner created an application that takes in two input files, one of all student names and ID's in a class and the other of all their grades in that course. It then outputs the average grade of each person with their ID next to their grade in a seperate .txt files</p>
-        <p>My contribution was to create the User Interface, and deal with any errors that could come up with syntax of files, or values in the negative or above 100</p>
-        </div>
-        <div class="chore-img">
-          <img class="CP317" src="images/317.png" height="250px" width="350px">
-        </div>
-        <div class="chore_img">
-          <a href="https://github.com/itsaddai/CP317-TEMP" target="_blank"><img src="images/3291695.png" height="50px" width="50px"> </a>
-          
-        </div>
-        <div class="website">
-          <h3 class="chore_header">My Website</h3>
-          <p>This website was my first web development project, after learning and attaining CSS javascript and html skills by studying on my own online and researching</p>
-          <img src="images/website.png" height="300px" width="300px">
-          <div class="chore_img">
-          <a href="https://github.com/Goldenhawk2003/My_Website" target="_blank"><img src="images/3291695.png" height="50px" width="50px"> </a>
-        </div>
-        </div>
-      </div>
-
-      </div>
-      <div id="services" class="tab-content" style="display:none;">
-        
-        <!-- Services tab content goes here -->
-        <p>I am a Computer Science Student At Wilfrid Laurier University</p>
-        <p>I have completed certifications and courses in multiple</p>
-        <p>programming and software engineering concepts, I am looking</p>
-        <p>to gain the most experience possible before graduating, and also</p>
-        <p>apply what I have learned to better the tech space.</p>
-        
-        <p>My Research</p>
-        <a href="files/Summer Research Paper AO.pdf" target="_blank">
-          <img class="enlarge-on-hover" src="images/Screenshot 2024-09-18 at 3.46.57 PM.png" width="240px" height="240px" />
-        </a>
-        <p>My Resume</p>
-        <a href="files/ResumeAO_SEPT2024.pdf" target="_blank">
-          <img class="enlarge-on-hover" src="images/resume.png" width="240px" height="240px" /></a>
-        <p class="skills">My Skills </p>
-        <fieldset class="plang">
-            <img class="enlarge-on-hover" src="logos/926px-C_Programming_Language.svg.png"  width="64px" height="64px"/>
-            <img class="enlarge-on-hover" src="logos/CSS3_logo.svg.png"  width="64px" height="64px"/>
-            <img class="enlarge-on-hover" src="logos/HTML5_Logo_512.png" width="64px" height="64px"/>
-            <img class="enlarge-on-hover" src="logos/JavaScript-logo.png" width="64px" height="64px"/>
-            <img class="enlarge-on-hover" src="logos/png-transparent-java-runtime-environment-programming-language-programmer-computer-programming-java-text-logo-software-developer.png" width="64px" height="64px"/>
-            <img class="enlarge-on-hover" src="logos/Python-logo-notext.svg.png" width="64px" height="64px"/>
-            <img class="enlarge-on-hover" src="logos/unnamed.png" width="64px" height="64px"/>
-        </fieldset>
-        <p> My certifications</p>
-        <img class="certy" src="images/web-development.png" height="400px" width="500px">
-        
-
-      </div>
-    
-      <div id="contact" class="tab-content" style="display:none;">
-
-        <!-- Contact tab content goes here -->
-        <h2 class="trans"> Contact me</h2>
-        <p>Contact me using the message box below or directly on <a>ammarogeil@gmail.com</a></p>
-          <form onsubmit="sendEmail(); reset(); return false;">
-            <fieldset>
-              <label for="name">Name: <input required type="name" id="name" placeholder="John Doe" /></label>
-              <label for="email"> Email: <input required id="email" type="email" placeholder="user123@gmail.com" /></label>
-              <label class="message" for="message">Message:</label><textarea required type="message" id="message" rows="3" cols="30" placeholder="How can I help you?"></textarea>
-              <button  class="submit" type="submit" >Submit</button>
-            </fieldset>
-            </form>
-      </div>
-
-      <script src="script.js"></script>
-<script src="https://smtpjs.com/v3/smtp.js">
+  <script src="script.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+ emailjs.init("nlz6kqj0jD-plwdvt");
 </script>
-<footer>
-  <fieldset class="plug">
-    <h3>Social Media</h3>
-    <a href="https://www.instagram.com/ammar__ogeil/" class="social"><img src="images/1_Instagram_colored_svg_1-128.webp" width="64px" height="64px"> </a>
-    <a href="" class="social"><img src="images/x-app-logo-1.jpg" width="64px" height="64px" ></a>
-    <a href="https://www.linkedin.com/in/ammar-ogeil-32723225a/" class=social> <img src="images/1_Linkedin_unofficial_colored_svg-128.webp" width="64px" height="64px" ></a>
-    <a href="https://github.com/Goldenhawk2003" class="social"> <img src="images/3291695.png" width="64px" height="64px" ></a>
-  </fieldset>
-</footer>
-    </body>
-    
-    </html>
-
-
-    
-    
+</body>
+</html>

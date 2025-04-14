@@ -9,6 +9,13 @@
 
 
 }
+.dark-theme {
+  --background-color: #121212;
+  --text-color: #ddd;
+  --title-color: #f5f5f5;
+  --box-color: #1e1e1e;
+  --box-text: #fff;
+}
 body, html {
   margin: 0;
   padding: 0;
@@ -27,361 +34,573 @@ body{
     margin: 0;
 
 }
-.skills{
+.dark-theme body {
+  color: var(--box-text);
+}
+
+.chore_header,
+#services h3,
+footer h3,
+#about h2,
+#contact h2 {
+  color: var(--title-color);
+}
+
+
+.dark-theme .chore_header,
+.dark-theme #services h3,
+.dark-theme footer h3,
+.dark-theme #about h2,
+.dark-theme #contact h2 {
+  color: var(--box-text);
+}
+/* === HOME TAB === */
+
+#home {
+  padding: 4rem 1rem;
   text-align: center;
 }
 
 .opener {
-    width: 80%;
-    text-align: center;
-    font-family: "Lucidia", monospace;
- 
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  min-height: 80vh;
 }
 
-h1{
-    font-size: 140px;
-    margin-top: 150px;
-    margin-bottom: 15px;
-    text-align: center; 
-    padding-left: 20%;
-    z-index: 2;
-
+.logo-container {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
 }
 
-h2{
-    font-size: 70px;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+#dvd-logo {
+  width: 80px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
 }
-h4{
-    font-size: 30px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    text-align: center; 
-    padding-left: 20%;
- 
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    z-index: 2;
+
+#dvd-logo:hover {
+  transform: scale(1.05);
+}
+
+main h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: 0.2rem;
+  margin: 0;
+}
+
+main h4 {
+  font-size: 1.25rem;
+  margin-top: 0.5rem;
+  font-weight: 600;
+  color: #555;
+}
+
+.center-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.code-container {
+  background-color: #f4f4f4;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  min-height: 60px;
+  width: fit-content;
+  font-family: 'Courier New', monospace;
+  font-size: 1.1rem;
+  color: #222;
+  border: 2px solid #ccc;
+}
+
+.dark-theme .code-container {
+  background-color: #1a1a1a;
+  border-color: #333;
+  color: #ddd;
+}
+
+/* === PROJECTS TAB CLEANUP === */
+
+#about {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#about h2 {
+  text-align: center;
+  font-size: 2.4rem;
+  margin-bottom: 2.5rem;
+  font-weight: 700;
+}
+
+/* Project container layout */
+.chore_container,
+.WeatherApp,
+.website {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  background-color: #fafafa;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  align-items: center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.dark-theme .chore_container,
+.dark-theme .WeatherApp,
+.dark-theme .website {
+  background-color: #1e1e1e;
+}
+
+/* Reverse layout for variety if desired */
+.chore_container.reverse,
+.WeatherApp.reverse,
+.website.reverse {
+  flex-direction: row-reverse;
+}
+
+/* Text block */
+.chore_text,
+.WeatherApp .chore_text,
+.website .chore_text {
+  flex: 1;
+  text-align: left;
+}
+
+.chore_header {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.chore_text p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.dark-theme .chore_text p {
+  color: #ccc;
+}
+
+/* Image block */
+.chore-img,
+.CRM-images,
+.Weather_container,
+.website img {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.CRM-images img,
+.Weather_container img,
+.website img,
+.chore-img img {
+  width: 100%;
+  max-width: 380px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.CRM-images img:hover,
+.Weather_container img:hover,
+.website img:hover,
+.chore-img img:hover {
+  transform: scale(1.05);
 }
 
 
-fieldset {
-    border-color: transparent;
+
+/* GitHub icons */
+.chore_img {
+  text-align: center;
+  margin-top: 1rem;
 }
 
-section{
-    width: 60vw;
-    max-width: 500px;
-    min-width: 300px;
-    height: 35vh;
-    margin: 0 auto;
-    margin-top: 150px;
-    color: #000000;
-    align-self: center;
-    padding-bottom: 4em;
-}
-label{
-    display: block;
-    
+.chore_img a img {
+  filter: grayscale(100%);
+  transition: filter 0.3s ease, transform 0.3s ease;
 }
 
-/* DARK MODE */
-.dark-mode{
-    background-color:  #121212;
-    color: #fff;
-    display: flex;
+.chore_img a img:hover {
+  filter: none;
+  transform: scale(1.1);
+}
+
+/* Stack layout on mobile */
+@media (max-width: 768px) {
+  .chore_container,
+  .WeatherApp,
+  .website {
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    width: 150px;
-    height: 40px;
-    cursor: pointer;
-    border-radius: 20px;
+    text-align: center;
+  }
+
+  .chore_text,
+  .chore-img,
+  .CRM-images {
+    text-align: center;
+  }
+
+  .chore_text p {
+    text-align: center;
+  }
 }
 
-.dark-theme{
-    --background-color: #121212;
-    --text-color: #fff;
-    --title-color: #fff;
-    --box-color: #fff;
-    --box-text: #121212;
-    --banner-color: rgb(232,171,59); 
-    --banner-text: rgb(45,13,109);
-}
+/* === ABOUT ME / SERVICES TAB === */
 
-
-label[for="name"], label[for="email"], .message {
+#services {
+  padding: 4rem 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
   text-align: center;
 }
-input[type="name"], input[type="email"], textarea[type="message"]{
-  display: block;
-  margin: 0 auto; 
-}
-input, textarea{
-    background-color: var(--background-color);
-    border: 1px solid var(--text-color);
-    color: var(--text-color);
-    margin: 10px 0 0 0; 
-    width: 40%;
-    min-width: 100px;
-    min-height: 2em;
-    display: block;
-    
 
-}
-fieldset {
-    border: none;
-    padding: 2rem 0;
-
-  }
-
-
-
-input[type="submit"] , button[type="submit"]{
-    display: block;
-    width: 40%;
-    margin: 1em auto;
-    height: 2em;
-    font-size: 1.1rem;
-    background-color: var(--background-color);
-    border-color: var(--text-color);
-    color: var(--text-color);
-    min-width: 300px;
-    align-self: center;
-  }
-
-
-
-
-.social{
-    display: inline-block;
+#services h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
 }
 
+#services p {
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
+  color: #444;
+}
 
-footer{
-  border-top: 1px solid #ccc; /* Top border */
-  padding: 10px;
+.dark-theme #services p {
+  color: #ccc;
+}
+
+/* Subheadings */
+#services h3 {
+  font-size: 1.4rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+/* Research and Resume Preview */
+#services a img {
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+#services a img:hover {
+  transform: scale(1.05);
+}
+
+/* Skills section */
+.plang {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  border: none;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.plang img {
+  width: 64px;
+  height: 64px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: grayscale(60%);
+}
+
+.plang img:hover {
+  transform: scale(1.2);
+  filter: grayscale(0%);
+}
+
+/* Certifications image */
+.certy {
+  margin-top: 1.5rem;
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.certy:hover {
+  transform: scale(1.02);
+}
+
+.dark-theme .certy {
+  filter: brightness(0.9);
+}
+.info-pair {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.info-card {
+  text-align: center;
+}
+
+.info-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: #111;
+}
+
+.dark-theme .info-card h3 {
+  color: #ddd;
+}
+
+.info-card img {
+  width: 240px;
+  height: 240px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.info-card img:hover {
+  transform: scale(1.05);
+}
+
+
+/* === TABS / NAVIGATION BAR === */
+
+.tabs {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  text-align: center; 
-  margin-top: 15%;
+  background-color: #2c0069;
+  padding: 0.75rem 2rem;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-/* DVD ANIMATION*/
-body {
-    margin: 0;
-    overflow: auto;
-  }
-  
-  .logo-container {
-    position: absolute;
-    z-index: -1;
-  }
-  
-  #dvd-logo {
-    width: 100px; /* Adjust the size of the logo as needed */
-    height: auto;
-    z-index: 0;
-   
-    position: absolute;
-      top: 0;
-      left: 0;
-      will-change: transform;
-    
-  }
-
-  .center-wrapper {
-    display: flex;
-    align-items: center;
-    align-self: center;
-    padding-left: 250px;
-    justify-content: center;  /* Center children horizontally */  /* Center children vertically */
-    height: 100px;            /* Take the full viewport height */
+.tab-btn {
+  background: transparent;
+  border: none;
+  color: #f5a623;
+  font-size: 1rem;
+  margin: 0 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: color 0.3s ease, transform 0.2s ease;
 }
 
-  .code-container {
-    font-family: 'Courier New', monospace;
-    font-size: 18px;
-    border: 2px solid #333;
-    padding: 20px;
-    background-color: var(--background-color);
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    min-width: 250px;
-    max-width: 250px;
-    min-height: 50px;
-    max-height: 100px;
-    z-index: 2;
-  
-    
-  }
+.tab-btn:hover {
+  color: #ffffff;
+  transform: translateY(-1px);
+}
 
-  .python-code {
-    white-space: pre-wrap;
-    color: #2E8B57; /* Dark Sea Green */
-   
-  }
-  
-  .keyword {
-    color: #0000FF; /* Blue */
-  }
-  
-  .comment {
-    color: #808080; /* Gray */
-  }
-  
-  .string {
-    color: #FF0000; /* Red */
-  }
+.dark-mode {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #111;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
 
+.dark-mode:hover {
+  background-color: #222;
+}
 
-  /*TABS */
+#btnText {
+  font-size: 0.9rem;
+}
+
+#btnIcon {
+  width: 16px;
+  height: 16px;
+}
+
+/* Responsive nav stacking */
+@media (max-width: 600px) {
   .tabs {
-    background-color: #f4f4f4;
-    padding: 0;
-    display: flex;
-    text-align:center;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
   }
-  
+
   .tab-btn {
-    background-color: var(--banner-color);
-    color: var(--banner-text);
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-  }
-  
-  .tab-btn:hover {
-    background-color: #fff;
-  }
-  
-  .tab-content {
-    padding: 20px;
-    text-align: center;
-    
-
+    margin: 0.2rem 0;
   }
 
-  .tab-btn, .dark-mode{
-    line-height: 1;
-    font-size: 16px;
-    flex:1;
+  .dark-mode {
+    align-self: flex-end;
   }
-
-
-  /* RESUME SKILLS ICONS */
-  .enlarge-on-hover {
-    transition: transform 0.3s ease-in-out; /* Add a smooth transition effect */
-  }
-  
-  .enlarge-on-hover:hover {
-    transform: scale(1.5); /* Increase the size on hover (adjust the scale factor as needed) */
-  }
-
-
-
-
-
-  /* PHONES */
-  @media(max-width: 480px) {
-h1{
-      font-size: 250%;
-        
-    }
-.tab-btn{
-      size: 60%;
-      align-items: center;
-        }
-.code-container {
-          font-family: 'Courier New', monospace;
-          font-size: 18px;
-          border: 2px solid #333;
-          background-color: var(--background-color);
-          border-radius: 8px;
-          z-index: 2;
-          size-adjust: 40%;
-
-        
-          
-        }
-      
-  }
-
-/* PROJECTS TAB */
-
-.chore_manager{
- text-align: left;
-}
-.chore_header{
-  text-align: left;
-  font-size:20px;
-  color: rgb(232,171,59);
-}
-.chore_container{
-  display: block; /* This will allow you to have a flexible layout */
-  flex-wrap: wrap; /* This will allow the items to wrap as needed */
-  align-items: center;
-  justify-content: center;
 }
 
-.chore_text{
-  flex: 1;  /* This will allow the text to take up the remaining space */
-  margin-right: 10px;
+
+
+/* === FOOTER === */
+
+footer {
+  background-color: #f3f3f3;
+  padding: 2rem 1rem;
+  text-align: center;
+  margin-top: 4rem;
 }
 
-.chore_img{
- /* Adjust the margin as needed */
-  flex: 1;
-  max-width: 100%; /* This ensures the image is responsive and fits within its container */
-  height: auto;
-  display: block;
-  align-items: center;
-  justify-content: center;
- 
+.dark-theme footer {
+  background-color: #121212;
 }
 
-.chore-img{
-   /* Adjust the margin as needed */
-  flex: 1;
-  max-width: 100%; /* This ensures the image is responsive and fits within its container */
-  height: auto;
+.plug {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.dark-theme footer h3 {
+  color: #ddd;
+}
+
+.social {
+  display: inline-block;
+  margin: 0 1rem;
+}
+
+.social img {
+  width: 64px;
+  height: 64px;
+  border-radius: 8px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: grayscale(70%);
+}
+
+.social img:hover {
+  transform: scale(1.15);
+  filter: grayscale(0%);
+}
+
+
+
+/* === CONTACT TAB === */
+
+#contact {
+  padding: 4rem 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#contact h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+#contact p {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  color: #444;
+}
+
+.dark-theme #contact p {
+  color: #ccc;
+}
+
+#contact a {
+  color: #4e1edb;
+  text-decoration: underline;
+}
+
+.dark-theme #contact a {
+  color: #9ab1ff;
+}
+
+/* Form styling */
+form fieldset {
+  border: none;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  justify-self: center;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0;
 }
 
-.CP317{
-
-  display: block;
-  justify-content: center;
+form label {
+  text-align: left;
+  font-weight: 500;
+  color: #333;
 }
 
-@media (max-width: 1170px) and (max-height: 2532px) {
-  #code-container{
-    width: 200px;
-    position: absolute;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
-    text-align: center;
-  }
-  .chore-img{
-    /* Adjust the margin as needed */
-   flex: 1;
-   max-width: 60%; /* This ensures the image is responsive and fits within its container */
-   height: auto;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   justify-self: center;
-  }
-  .certy{
-    max-width: 250px;
+.dark-theme form label {
+  color: #ddd;
+}
 
-  }
+input[type="text"],
+input[type="email"],
+textarea {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #222;
+  transition: border-color 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #5e2ceb;
+  outline: none;
+}
+
+.dark-theme input,
+.dark-theme textarea {
+  background-color: #1e1e1e;
+  color: #eee;
+  border-color: #444;
+}
+
+.submit {
+  background-color: #5e2ceb;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 1rem;
+}
+
+.submit:hover {
+  background-color: #4b21c2;
+  transform: translateY(-2px);
 }

@@ -20,7 +20,7 @@ app.post('/send-email', (req, res) => {
     service: 'gmail',
     auth: {
       user: 'ammar.webfile@gmail.com',
-      pass: 'resume_2003',
+      pass: 'elkh hsye cvik gmia',
     },
   });
 

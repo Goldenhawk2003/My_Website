@@ -1,0 +1,22 @@
+<div id="contact" class="tab-content">
+    <h2 class="trans">Contact Me</h2>
+    <p>
+      You can message me directly using the form below, or email me at
+      <a href="mailto:ammarogeil@gmail.com">ammarogeil@gmail.com</a>
+    </p>
+  
+    <form onsubmit="sendEmail(); return false;">
+        <fieldset>
+          <label for="name">Name:</label>
+          <input required type="text" id="name" placeholder="John Doe" />
+      
+          <label for="email">Email:</label>
+          <input required type="email" id="email" placeholder="you@example.com" />
+      
+          <label for="message">Message:</label>
+          <textarea required id="message" rows="4" placeholder="How can I help you?"></textarea>
+      
+          <button type="submit" class="submit">Submit</button>
+        </fieldset>
+      </form>
+  </div>
