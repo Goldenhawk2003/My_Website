@@ -261,7 +261,11 @@ main h4 {
     align-items: center;
     text-align: center;
   }
-
+.reverse {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
   .chore_text,
   .chore-img,
   .CRM-images {
