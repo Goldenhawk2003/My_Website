@@ -208,11 +208,12 @@ main h4 {
   gap: 1rem;
   justify-content: center;
   align-items: center;
+  object-fit: cover;
 }
 
 .CRM-images img,
-.Weather_container img,
 .website img,
+.Solactive-images img,
 .chore-img img {
   width: 100%;
   max-width: 380px;
@@ -222,6 +223,9 @@ main h4 {
   transition: transform 0.3s ease;
 }
 
+.Weather_container img{
+  width: 48%;
+}
 .CRM-images img:hover,
 .Weather_container img:hover,
 .website img:hover,
@@ -238,7 +242,7 @@ main h4 {
 }
 
 .chore_img a img {
-  filter: grayscale(100%);
+
   transition: filter 0.3s ease, transform 0.3s ease;
 }
 
@@ -327,7 +331,7 @@ main h4 {
   width: 64px;
   height: 64px;
   transition: transform 0.3s ease, filter 0.3s ease;
-  filter: grayscale(60%);
+  
 }
 
 .plang img:hover {
@@ -501,7 +505,7 @@ footer h3 {
   height: 64px;
   border-radius: 8px;
   transition: transform 0.3s ease, filter 0.3s ease;
-  filter: grayscale(70%);
+  
 }
 
 .social img:hover {
