@@ -266,6 +266,13 @@ main h4 {
     align-items: center !important;
     text-align: center !important;
   }
+
+  .Weather_container{
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    width: 48%;
+  }
   .chore_text,
   .chore-img,
   .CRM-images {
