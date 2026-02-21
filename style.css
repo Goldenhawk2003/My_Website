@@ -255,6 +255,7 @@ main h4 {
 @media (max-width: 768px) {
   .chore_container,
   .WeatherApp,
+  .chore_container.reverse
   .website {
     flex-direction: column;
     align-items: center;
